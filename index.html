@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kandukuri Yaswanth Veer – Portfolio</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google fonts (optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Glass-morphism helper (3 kB) -->
+  <style>
+    /* tiny glass.css – safari-safe backdrop-blur */
+    .glass {
+      -webkit-backdrop-filter: blur(8px) saturate(120%);
+      backdrop-filter: blur(8px) saturate(120%);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      -webkit-backdrop-filter: blur(8px);
+      backdrop-filter: blur(8px);
+    }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #000;
+      color: #f3f4f6;
+    }
+    /* subtle gradient boxes */
+    .grad-box {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      box-shadow: 0 30px 80px rgba(2, 6, 23, 0.8);
+    }
+    /* smooth appear */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.7s forwards;
+    }
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    /* list bullets */
+    ul.list-disc li {
+      margin-left: 1.2rem;
+    }
+  </style>
+</head>
+
+<body class="antialiased">
+  <!-- NAV -->
+  <nav class="fixed top-6 left-6 right-6 z-40 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <div class="glass-card px-3 py-1 rounded-2xl">
+        <span class="font-medium">Yaswanth.</span>
+      </div>
+      <div class="hidden md:flex gap-3 ml-3 text-sm">
+        <a href="#about" class="hover:underline">About</a>
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#experience" class="hover:underline">Experience</a>
+        <a href="#contact" class="hover:underline">Contact</a>
+      </div>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="https://www.linkedin.com/in/yaswanthveer-k/" target="_blank" rel="noreferrer" class="p-2 rounded-md glass-card hover:bg-white/6">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      </a>
+      <a href="mailto:yaswanthveer1233@gmail.com" class="p-2 rounded-md glass-card hover:bg-white/6">
+        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="pt-32 pb-12 px-6 md:px-16 lg:px-32">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+      <div class="flex-1 fade-up">
+        <h1 class="text-4xl md:text-6xl font-semibold leading-tight">
+          <span class="block text-3xl md:text-4xl text-white/70">Hello, I’m</span>
+          <span class="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-300 text-6xl md:text-7xl font-extrabold">Kandukuri Yaswanth Veer</span>
+        </h1>
+        <p class="mt-6 max-w-xl text-gray-300 text-lg">
+          AI Developer • ML • Full‑Stack with experience building AI voice bots, ML solutions and full‑stack apps. I design elegant, human‑centric systems and ship production features from prototype to deployment.
+        </p>
+        <div class="mt-8 flex gap-4">
+          <a href="#projects" class="inline-flex items-center gap-2 px-5 py-3 rounded-full glass-card hover:scale-105 transition-transform">Explore Projects</a>
+          <a href="mailto:yaswanthveer1233@gmail.com" class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/8">Contact</a>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <div class="px-3 py-2 rounded-lg bg-white/3">CPI: 8.77</div>
+          <div class="px-3 py-2 rounded-lg bg-white/3">Location: India</div>
+          <div class="px-3 py-2 rounded-lg bg-white/3">Open to ML & Full‑Stack roles</div>
+        </div>
+      </div>
+
+      <!-- VisionPro-esque card -->
+      <div class="flex-1 max-w-md w-full fade-up" style="animation-delay:.2s">
+        <div class="grad-box rounded-3xl p-6">
+          <div class="glass-card rounded-2xl p-5">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <div class="text-sm text-white/70">Senior Intern • AI Product</div>
+                <div class="mt-1 font-semibold text-xl">Armsofttech.Air</div>
+              </div>
+              <div class="text-sm text-gray-300">Jan - Apr 2024</div>
+            </div>
+            <div class="mt-4 text-gray-300 text-sm leading-relaxed">
+              Built AI voice bots, integrated voice messaging across microservices and worked with protocol buffers for serialization between services.
+            </div>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <div class="px-3 py-1 rounded-full bg-white/4 text-sm">AI</div>
+              <div class="px-3 py-1 rounded-full bg-white/4 text-sm">Voice Bots</div>
+              <div class="px-3 py-1 rounded-full bg-white/4 text-sm">Microservices</div>
+            </div>
+          </div>
+          <div class="mt-6 flex items-center gap-4">
+            <div class="w-12 h-12 rounded-lg bg-white/6 flex items-center justify-center">📄</div>
+            <div>
+              <div class="text-sm text-white/70">Resume</div>
+              <a href="#contact" class="text-sm underline">View & Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="px-6 md:px-16 lg:px-32 pb-32">
+    <!-- ABOUT -->
+    <section id="about" class="max-w-6xl mx-auto mt-12 fade-up" style="animation-delay:.3s">
+      <h2 class="text-2xl font-semibold">About Me</h2>
+      <p class="mt-4 text-gray-300 max-w-3xl">
+        I am a problem solver and product-minded engineer specializing in AI/ML and full-stack development. I have built production voice bots, ML models and cross-platform applications. I write research-backed reports, mentor students and ship real-world products that aim to simplify user experiences.
+      </p>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-5 rounded-2xl border border-white/6 bg-white/2">
+          <div class="text-sm text-gray-300">2021 - Present</div>
+          <div class="mt-2 font-semibold">B.Tech, Computer Science & Engineering</div>
+          <div class="mt-1 text-sm text-gray-400">Saveetha University</div>
+          <div class="mt-3 inline-block px-3 py-1 rounded-full bg-white/4">CPI: 8.77</div>
+        </div>
+        <div class="p-5 rounded-2xl border border-white/6 bg-white/2">
+          <div class="text-sm text-gray-300">2019</div>
+          <div class="mt-2 font-semibold">HSC (Physics, Chemistry, Mathematics)</div>
+          <div class="mt-1 text-sm text-gray-400">MTJC Palamaner</div>
+          <div class="mt-3 inline-block px-3 py-1 rounded-full bg-white/4">CPI: 8.44</div>
+        </div>
+        <div class="p-5 rounded-2xl border border-white/6 bg-white/2">
+          <div class="text-sm text-gray-300">2017</div>
+          <div class="mt-2 font-semibold">SSC (CBSE)</div>
+          <div class="mt-1 text-sm text-gray-400">Elena Bettini</div>
+          <div class="mt-3 inline-block px-3 py-1 rounded-full bg-white/4">CPI: 9.7</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="max-w-6xl mx-auto mt-16 fade-up" style="animation-delay:.4s">
+      <h2 class="text-2xl font-semibold">Projects</h2>
+      <div class="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl border border-white/6 bg-gradient-to-b from-white/3 to-transparent cursor-pointer" onclick="openModal('p1')">
+          <div class="text-sm text-gray-300">Mar - Apr 2023</div>
+          <div class="mt-3 font-semibold text-lg">Identifying Lifestyle Diseases using Daily Food Calorie Intake</div>
+          <div class="mt-3 text-sm text-gray-300 line-clamp-3">Decision Tree model + visual analysis to correlate calorie intake with lifestyle diseases. Documented a comprehensive report and visual insights.</div>
+          <div class="mt-4 flex gap-2 flex-wrap">
+            <div class="px-3 py-1 rounded-full bg-white/4 text-sm">Python</div>
+            <div class="px-3 py-1 rounded-full bg-white/4 text-sm">Decision Trees</div>
+            <div class="px-3 py-1 rounded-full bg-white/4 text-sm">Data Visualization</div>
+          </div>
+        </div>
+        <div class="p-6 rounded-2xl border border-white/6 bg-gradient-to-b from-white/3 to-transparent cursor-pointer" onclick="openModal('p2')">
+          <div class="text-sm text-gray-300">Feb - Apr 2024</div>
+          <div class="mt-3 font-semibold text-lg">Blue Collar Connect (Web Application)</div>
+          <div class="mt-3 text-sm text-gray-300 line-clamp-3">A platform connecting blue-collar workers with recruiters. Built with Figma, React and Vibe Coding. No fees — easy job discovery for daily wage workers.</div>
+          <div class="mt-4 flex gap-2 flex-wrap">
+            <div class="px-3 py-1 rounded-full bg-white/4 text-sm">React.js</div>
+            <div class="px-3 py-1 rounded-full bg-white/4 text-sm">Figma</div>
+            <div class="px-3 py-1 rounded-full bg-white/4 text-sm">Vibe Coding</div>
+          </div>
+        </div>
+        <div class="p-6 rounded-2xl border border-white/6 bg-gradient-to-b from-white/3 to-transparent cursor-pointer" onclick="openModal('p3')">
+          <div class="text-sm text-gray-300">Sep - Dec 2025</div>
+          <div class="mt-3 font-semibold text-lg">Travel Agent (Gen AI)</div>
+          <div class="mt-3 text-sm text-gray-300 line-clamp-3">Generative AI travel planner that suggests budgets, itineraries, and attendees. Built with Python, Gemini API and Streamlit.</div>
+          <div class="mt-4 flex gap-2 flex-wrap">
+            <div class="px-3 py-1 rounded-full bg-white/4 text-sm">Python</div>
+            <div class="px-3 py-1 rounded-full bg-white/4 text-sm">Gemini API</div>
+            <div class="px-3 py-1 rounded-full bg-white/4 text-sm">Streamlit</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="max-w-6xl mx-auto mt-16 fade-up" style="animation-delay:.5s">
+      <h2 class="text-2xl font-semibold">Experience</h2>
+      <div class="mt-6 space-y-6">
+        <div class="p-6 rounded-2xl border border-white/6 bg-white/2">
+          <div>
+            <div class="font-semibold">AI ChatBot Intern • <span class="text-gray-300">Armsofttech.Air</span></div>
+            <div class="text-sm text-gray-400 mt-1">Jan - Apr 2024</div>
+          </div>
+          <ul class="mt-4 list-disc ml-5 text-gray-300">
+            <li>Built 8+ AI-based voice bots improving customer experience and operations.</li>
+            <li>Developed a chatbot that used voice messaging to communicate between microservices using protocol buffers.</li>
+            <li>Integrated AI voice solutions to elevate customer interactions.</li>
+          </ul>
+        </div>
+        <div class="p-6 rounded-2xl border border-white/6 bg-white/2">
+          <div>
+            <div class="font-semibold">Freelancer (Machine Learning & Web Development) • <span class="text-gray-300">Personal / Clients</span></div>
+            <div class="text-sm text-gray-400 mt-1">Feb 2022 - Mar 2025</div>
+          </div>
+          <ul class="mt-4 list-disc ml-5 text-gray-300">
+            <li>Built ML projects and research papers for students; provided algorithmic guidance.</li>
+            <li>Developed web & iOS apps using Flutter, React, MERN, Xcode and UI tools like Figma.</li>
+            <li>Used 10+ AI tools across projects.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADERSHIP & ACHIEVEMENTS -->
+    <section class="max-w-6xl mx-auto mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 fade-up" style="animation-delay:.6s">
+      <div class="p-6 rounded-2xl border border-white/6 bg-white/2">
+        <h3 class="font-semibold">Leadership</h3>
+        <div class="mt-3 text-gray-300">
+          <div class="mb-4">
+            <div class="font-semibold">SIMAM Event Coordinator • <span class="text-gray-400">Saveetha University's SIMAM Fest</span></div>
+            <div class="text-sm text-gray-400">Mar - May 2025</div>
+            <div class="mt-2 text-gray-300">Organized a 3-day cultural festival attended by 5000+ participants; led coordinators, crowd management and celebrity bookings.</div>
+          </div>
+        </div>
+      </div>
+      <div class="p-6 rounded-2xl border border-white/6 bg-white/2">
+        <h3 class="font-semibold">Achievements</h3>
+        <ul class="mt-3 list-disc ml-5 text-gray-300">
+          <li>Best event coordinator for SIMAM 2025 managing ~9000 students.</li>
+          <li>Position in Inter Saveetha Hackathon (top among 50+ submissions).</li>
+          <li>Author of "BREAKING THE CODE".</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="max-w-6xl mx-auto mt-16 fade-up" style="animation-delay:.7s">
+      <h3 class="text-2xl font-semibold">Skills</h3>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <div class="px-4 py-2 rounded-full bg-white/4 text-sm">Python</div>
+        <div class="px-4 py-2 rounded-full bg-white/4 text-sm">React</div>
+        <div class="px-4 py-2 rounded-full bg-white/4 text-sm">Flutter</div>
+        <div class="px-4 py-2 rounded-full bg-white/4 text-sm">Figma</div>
+        <div class="px-4 py-2 rounded-full bg-white/4 text-sm">MERN</div>
+        <div class="px-4 py-2 rounded-full bg-white/4 text-sm">Excel</div>
+        <div class="px-4 py-2 rounded-full bg-white/4 text-sm">Power BI</div>
+        <div class="px-4 py-2 rounded-full bg-white/4 text-sm">MySQL</div>
+        <div class="px-4 py-2 rounded-full bg-white/4 text-sm">PostgreSQL</div>
+        <div class="px-4 py-2 rounded-full bg-white/4 text-sm">Docker</div>
+        <div class="px-4 py-2 rounded-full bg-white/4 text-sm">Git</div>
+        <div class="px-4 py-2 rounded-full bg-white/4 text-sm">LaTeX</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-6xl mx-auto mt-16 fade-up" style="animation-delay:.8s">
+      <div class="p-8 rounded-3xl border border-white/6" style="background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01))">
+        <div class="md:flex md:items-center md:justify-between">
+          <div>
+            <h3 class="text-2xl font-semibold">Let’s build something together</h3>
+            <p class="mt-2 text-gray-300">Reach out for ML, AI or full-stack collaboration.</p>
+            <div class="mt-4 flex items-center gap-4">
+              <a href="mailto:yaswanthveer1233@gmail.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg> Email</a>
+              <a href="https://www.linkedin.com/in/yaswanthveer-k/" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/6"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg> LinkedIn</a>
+            </div>
+          </div>
+          <form class="mt-6 md:mt-0 w-full md:w-1/2" onsubmit="event.preventDefault(); alert('Form submitted! (static demo)');">
+            <div class="grid grid-cols-1 gap-3">
+              <input required class="w-full rounded-xl p-3 bg-white/3 border border-white/6 placeholder-gray-300" placeholder="Your name" />
+              <input required type="email" class="w-full rounded-xl p-3 bg-white/3 border border-white/6 placeholder-gray-300" placeholder="Your email" />
+              <textarea required rows="4" class="w-full rounded-xl p-3 bg-white/3 border border-white/6 placeholder-gray-300" placeholder="Message"></textarea>
+              <button class="px-4 py-3 rounded-full glass-card">Send Message</button>
+            </div>
+          </form>
+        </div>
+        <div class="mt-6 text-sm text-gray-400">Phone: +91-7013366769 • Email: yaswanthveer1233@gmail.com</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="fixed bottom-6 left-6 right-6 text-center text-xs text-gray-500">© <span id="year"></span> Kandukuri Yaswanth Veer — Built with vision, code & coffee.</footer>
+
+  <!-- MODAL -->
+  <div id="modal" class="fixed inset-0 z-50 items-center justify-center p-6 hidden">
+    <div class="absolute inset-0 bg-black/60" onclick="closeModal()"></div>
+    <div id="modalPanel" class="relative max-w-3xl w-full rounded-3xl p-8 grad-box">
+      <button onclick="closeModal()" class="absolute top-4 right-4 p-2 rounded-md glass-card"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.954 21.03l-9.184-9.095 9.092-9.174-2.832-2.807-9.09 9.179-9.176-9.088-2.81 2.81 9.186 9.105-9.095 9.184 2.81 2.81 9.112-9.192 9.18 9.1z"/></svg></button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Tiny modal controller -->
+  <script>
+    const projects = {
+      p1: {
+        title: "Identifying Lifestyle Diseases using Daily Food Calorie Intake",
+        year: "Mar - Apr 2023",
+        desc: "Decision Tree model + visual analysis to correlate calorie intake with lifestyle diseases. Documented a comprehensive report and visual insights.",
+        tech: ["Python", "Decision Trees", "Data Visualization"]
+      },
+      p2: {
+        title: "Blue Collar Connect (Web Application)",
+        year: "Feb - Apr 2024",
+        desc: "A platform connecting blue-collar workers with recruiters. Built with Figma, React and Vibe Coding. No fees — easy job discovery for daily wage workers.",
+        tech: ["React.js", "Figma", "Vibe Coding"]
+      },
+      p3: {
+        title: "Travel Agent (Gen AI)",
+        year: "Sep - Dec 2025",
+        desc: "Generative AI travel planner that suggests budgets, itineraries, and attendees. Built with Python, Gemini API and Streamlit.",
+        tech: ["Python", "Gemini API", "Streamlit"]
+      }
+    };
+    function openModal(id) {
+      const p = projects[id];
+      document.getElementById('modalContent').innerHTML = `
+        <div>
+          <div class="text-sm text-gray-300">${p.year}</div>
+          <div class="mt-1 text-2xl font-semibold">${p.title}</div>
+        </div>
+        <div class="mt-6 text-gray-300">
+          <p>${p.desc}</p>
+          <div class="mt-4"><strong>Tech:</strong> ${p.tech.join(', ')}</div>
+          <div class="mt-6 flex gap-3">
+            <a class="px-4 py-2 rounded-full glass-card cursor-pointer">Live Demo</a>
+            <a class="px-4 py-2 rounded-full border border-white/6 cursor-pointer">Source</a>
+          </div>
+        </div>`;
+      document.getElementById('modal').classList.remove('hidden');
+      document.getElementById('modal').classList.add('flex');
+    }
+    function closeModal() {
+      document.getElementById('modal').classList.add('hidden');
+      document.getElementById('modal').classList.remove('flex');
+    }
+    // year footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
